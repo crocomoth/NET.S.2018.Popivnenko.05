@@ -23,5 +23,34 @@ namespace NET.S._2018.Popivnenko.Polynom.Test
             Polynomial actualResult = firstPolynomial + secondPolynomial;
             CollectionAssert.AreEqual(result, actualResult.GetCoefficientsAsArray());
         }
+
+        [DataTestMethod]
+        [DataRow(new double[] { 1, 3, 5 }, new double[] { 1, 1, 1, 1 }, new double[] { 0, 2, 4, -1 })]
+        [DataRow(new double[] { 1, 3, 5 }, new double[] { 0, 3, 5 }, new double[] { 1, 0, 0 })]
+        [DataRow(new double[] { 1, 3, 5 }, new double[] { 1, 1, 1 }, new double[] { 0, 2, 4 })]
+        public void Test_OperatorMinus(double[] first, double[] second, double[] result)
+        {
+            Polynomial firstPolynomial = new Polynomial(first);
+            Polynomial secondPolynomial = new Polynomial(second);
+            Polynomial actualResult = firstPolynomial - secondPolynomial;
+            CollectionAssert.AreEqual(result, actualResult.GetCoefficientsAsArray());
+        }
+
+        [DataTestMethod]
+        [DataRow(new double[] { -5,1 }, new double[] { 1,4,1 }, new double[] { -5,-19,-1,1 })]
+        public void Test_multiply(double[] first, double[] second, double[] result)
+        {
+            Polynomial firstPolynomial = new Polynomial(first);
+            Polynomial secondPolynomial = new Polynomial(second);
+            Polynomial actualResult = firstPolynomial - secondPolynomial;
+            CollectionAssert.AreEqual(result, actualResult.GetCoefficientsAsArray());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Test_Null()
+        {
+            Polynomial polynomial = new Polynomial(null);
+        }
     }
 }
