@@ -17,6 +17,7 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
         /// <param name="array">Array to be sorted.</param>
         public static void SortByMaxElemInRowDescending(int[][] array)
         {
+            CheckArrayForUselessValues(array);
             int count = 0;
             foreach (int[] row in array)
             {
@@ -42,6 +43,7 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
         /// <param name="array">Array to be sorted.</param>
         public static void SortByMaxElemInRowAscending(int[][] array)
         {
+            CheckArrayForUselessValues(array);
             int count = 0;
             foreach (int[] row in array)
             {
@@ -67,6 +69,7 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
         /// <param name="array">Array to be sorted.</param>
         public static void SortBySumOfRowAscending(int[][] array)
         {
+            CheckArrayForUselessValues(array);
             int count = 0;
             foreach (int[] row in array)
             {
@@ -92,6 +95,7 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
         /// <param name="array">Array to be sorted.</param>
         public static void SortBySumOfRowDescending(int[][] array)
         {
+            CheckArrayForUselessValues(array);
             int count = 0;
             foreach (int[] row in array)
             {
@@ -118,6 +122,7 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
         /// <param name="array">Array to be sorted.</param>
         public static void SortByMinElemInRowDescending(int[][] array)
         {
+            CheckArrayForUselessValues(array);
             int count = 0;
             foreach (int[] row in array)
             {
@@ -143,6 +148,7 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
         /// <param name="array">Array to be sorted.</param>
         public static void SortByMinElemInRowAscending(int[][] array)
         {
+            CheckArrayForUselessValues(array);
             int count = 0;
             foreach (int[] row in array)
             {
@@ -209,6 +215,19 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
                 result += array[i];
             }
             return result;
+        }
+
+
+        private static void CheckArrayForUselessValues(int[][] array)
+        {
+            if (array == null)
+            {
+                throw new ArgumentNullException(nameof(array));
+            }
+            if (array.Length == 0)
+            {
+                throw new ArgumentException("array is empty", nameof(array));
+            }
         }
         #endregion Private Helpers
     }

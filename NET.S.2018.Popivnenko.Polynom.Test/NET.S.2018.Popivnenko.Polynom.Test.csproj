@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JaggedArraySorterTest.cs" />
     <Compile Include="PolynomialTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NET.S.2018.Popivnenko.05.JaggedArraySorterProj\NET.S.2018.Popivnenko.05.JaggedArraySorterProj.csproj">
+      <Project>{95234819-8692-4018-ab26-31976190bed8}</Project>
+      <Name>NET.S.2018.Popivnenko.05.JaggedArraySorterProj</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NET.S.2018.Popivnenko.05\NET.S.2018.Popivnenko.05.Polynom.csproj">
       <Project>{5967321e-2287-4ef8-b175-37223e541e11}</Project>
       <Name>NET.S.2018.Popivnenko.05.Polynom</Name>
