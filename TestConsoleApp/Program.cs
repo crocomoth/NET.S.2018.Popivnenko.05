@@ -25,7 +25,10 @@ namespace TestConsoleApp
             jaggedArray[1] = new int[] { 0, 2, 4, 6 };
             jaggedArray[2] = new int[] { 11, 22 };
             JaggedArraySorter.SortByMaxElemInRowAscending(jaggedArray);
-            JaggedArraySorter.SortByMaxElemInRowAscending(null);
+            int[][] array = new int[2][];
+            array[0] = null;
+            array[1] = null;
+            JaggedArraySorter.SortBySumOfRowAscending(array);
             pol = smth.ToString();
         }
     }

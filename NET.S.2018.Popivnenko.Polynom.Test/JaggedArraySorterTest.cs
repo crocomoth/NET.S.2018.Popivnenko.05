@@ -115,5 +115,21 @@ namespace NET.S._2018.Popivnenko.Polynom.Test
                 CollectionAssert.AreEqual(resultArray[i], jaggedArray[i]);
             }
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void SortByMaxRowSumNullTest()
+        {
+            JaggedArraySorter.SortBySumOfRowAscending(null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void SortByMaxRowSumArgumentEsceptionTest()
+        {
+            int[][] array = new int[1][];
+            array[0] = null;
+            JaggedArraySorter.SortBySumOfRowAscending(array);
+        }
     }
 }

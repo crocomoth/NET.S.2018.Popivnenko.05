@@ -228,6 +228,13 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
             {
                 throw new ArgumentException("array is empty", nameof(array));
             }
+            foreach (var row in array)
+            {
+                if (row == null)
+                {
+                    throw new ArgumentNullException(nameof(array));
+                }
+            }
         }
         #endregion Private Helpers
     }
