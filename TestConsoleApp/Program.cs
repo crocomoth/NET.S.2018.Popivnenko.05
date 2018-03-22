@@ -1,4 +1,5 @@
 ﻿using NET.S._2018.Popivnenko._05;
+using NET.S._2018.Popivnenko._05.JaggedArraySorterProj;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,12 @@ namespace TestConsoleApp
             smth = new Polynomial(new double[] { 1, 3, 5 });
             string pol = smth.ToString();
             pol += "1";
+            int[][] jaggedArray = new int[3][];
+            jaggedArray[0] = new int[] { 1, 3, 5, 7, 9 };
+            jaggedArray[1] = new int[] { 0, 2, 4, 6 };
+            jaggedArray[2] = new int[] { 11, 22 };
+            JaggedArraySorter.SortByMaxElemInRowDescending(jaggedArray);
+            pol = smth.ToString();
         }
     }
 }

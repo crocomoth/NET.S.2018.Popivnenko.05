@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Popivnenko.Polyn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApp", "TestConsoleApp\TestConsoleApp.csproj", "{F7434D93-35DB-42E5-B84A-20A8398EF588}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Popivnenko.05.JaggedArraySorterProj", "NET.S.2018.Popivnenko.05.JaggedArraySorterProj\NET.S.2018.Popivnenko.05.JaggedArraySorterProj.csproj", "{95234819-8692-4018-AB26-31976190BED8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F7434D93-35DB-42E5-B84A-20A8398EF588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7434D93-35DB-42E5-B84A-20A8398EF588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7434D93-35DB-42E5-B84A-20A8398EF588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95234819-8692-4018-AB26-31976190BED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95234819-8692-4018-AB26-31976190BED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95234819-8692-4018-AB26-31976190BED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95234819-8692-4018-AB26-31976190BED8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
