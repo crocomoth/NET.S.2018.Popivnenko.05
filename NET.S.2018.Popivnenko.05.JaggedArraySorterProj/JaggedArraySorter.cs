@@ -168,6 +168,52 @@ namespace NET.S._2018.Popivnenko._05.JaggedArraySorterProj
             }
         }
 
+        /// <summary>
+        /// Allows to sort jagged arrays via <see cref="IComparer"/>.
+        /// Sorts arrays in ascending order by default.
+        /// throws <see cref="ArgumentNullException"/> case <paramref name="array"/> or <paramref name="comparer"/> is null
+        /// </summary>
+        /// <param name="array">Array to be sorted.</param>
+        /// <param name="comparer">Comparer which will be used to compare rows.</param>
+        public static void ComparerSorter(int[][] array,IComparer<int[]> comparer)
+        {
+            try
+            {
+                CheckArrayForUselessValues(array);
+            }
+            catch (ArgumentNullException e)
+            {
+                throw e;
+            }
+            catch (ArgumentException e)
+            {
+                throw e;
+            }
+            if (comparer == null)
+            {
+                throw new ArgumentNullException(nameof(comparer));
+            }
+
+            int count = 0;
+            foreach (int[] row in array)
+            {
+                count++;
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                for (int j = 0; j < count - 1; j++)
+                {
+                    if (comparer.Compare(array[j + 1], array[j]) < 0)
+                    {
+                        int[] tmp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = tmp;
+                    }
+                }
+            }
+        }
+
         #region Private Helpers
         private static int FindMaxElemInRow(int[] array)
         {
